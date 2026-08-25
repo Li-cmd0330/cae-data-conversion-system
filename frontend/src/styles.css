@@ -1,0 +1,290 @@
+body { 
+  margin: 0; 
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #1f2937; 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Microsoft YaHei', sans-serif;
+}
+
+.layout { min-height: 100vh; }
+
+.sidebar { 
+  background: linear-gradient(180deg, #1a1f3a 0%, #2d3561 50%, #1a1f3a 100%);
+  color: #fff;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.3);
+}
+
+.brand { 
+  padding: 24px; 
+  font-size: 16px; 
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu { 
+  border-right: none; 
+  background: transparent; 
+}
+
+.menu .el-menu-item { 
+  color: rgba(255,255,255,0.85);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 4px 12px;
+  border-radius: 10px;
+}
+
+.menu .el-menu-item.is-active, 
+.menu .el-menu-item:hover { 
+  background: rgba(255,255,255,.12); 
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.menu .el-menu-item.is-active {
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0.15) 100%);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  font-weight: 600;
+}
+
+.header { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.15);
+  font-weight: 700;
+  padding: 0 24px;
+}
+
+.page-card { 
+  border-radius: 16px; 
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-card:hover {
+  box-shadow: 0 12px 48px rgba(102, 126, 234, 0.18);
+  transform: translateY(-2px);
+}
+
+.page-title { 
+  margin: 0 0 18px; 
+  font-size: 28px; 
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+}
+
+.toolbar { 
+  display: flex; 
+  gap: 12px; 
+  align-items: center; 
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+/* 美化按钮 */
+.el-button--primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.el-button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.el-button--success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: none;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.el-button--success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+}
+
+.el-button--warning {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  border: none;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+}
+
+.el-button--danger {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  border: none;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+/* 美化表格 */
+.el-table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(102, 126, 234, 0.08);
+}
+
+.el-table th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.el-table tr:hover {
+  background: rgba(102, 126, 234, 0.05);
+}
+
+/* 美化卡片 */
+.el-card {
+  border-radius: 16px;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.el-card:hover {
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+  transform: translateY(-2px);
+}
+
+/* 美化标签 */
+.el-tag {
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-weight: 500;
+}
+
+.el-tag--success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: none;
+  color: white;
+}
+
+.el-tag--info {
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  border: none;
+  color: white;
+}
+
+.el-tag--warning {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  border: none;
+  color: white;
+}
+
+.el-tag--danger {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  border: none;
+  color: white;
+}
+
+/* 美化进度条 */
+.el-progress__text {
+  font-weight: 600;
+}
+
+.el-progress-bar__inner {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+/* 美化对话框 */
+.el-dialog {
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+}
+
+.el-dialog__header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 16px 16px 0 0;
+  padding: 20px;
+}
+
+.el-dialog__title {
+  color: white;
+  font-weight: 700;
+}
+
+/* 美化输入框 */
+.el-input__wrapper {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
+  transition: all 0.3s;
+}
+
+.el-input__wrapper:hover,
+.el-input__wrapper.is-focus {
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+/* 美化选择器 */
+.el-select .el-input__wrapper {
+  border-radius: 10px;
+}
+
+/* 美化时间线 */
+.el-timeline-item__timestamp {
+  color: #667eea;
+  font-weight: 500;
+}
+
+.el-timeline-item__node {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* 美化警告框 */
+.el-alert {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.el-alert--info {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #6a3d8f 100%);
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-card {
+  animation: fadeIn 0.5s ease-out;
+}
